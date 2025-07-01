@@ -1,0 +1,65 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "experimentalDecorators": true,
+//     "useDefineForClassFields": false,
+//     "module": "ESNext",
+//     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+//     "skipLibCheck": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "isolatedModules": true,
+//     "moduleDetection": "force",
+//     "noEmit": true,
+//     "allowJs": true,
+//     "jsx": "react-jsx",
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "noUncheckedSideEffectImports": true,
+
+//     "paths": {
+//       "@/*" :  ["./*"]
+//     }
+//   }
+// }
+{
+  "compilerOptions": {
+    "target": "ES2020", // ESNext is also fine, ES2020 is good.
+    // "experimentalDecorators": true, // Remove if not using decorators
+    "useDefineForClassFields": true, // Changed from false
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "paths": {
+      "@/*": ["./*"] // This alias setup is good
+    }
+  },
+  "include": [
+    "index.tsx",
+    "App.tsx",
+    "types.ts",
+    "constants.ts",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "vite.config.ts"
+  ], // Be explicit about included files
+  "exclude": ["node_modules", "dist"] // Good to exclude these
+}
